@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Помощник общего чата",
+  "version": "0.2.0",
+  "description": "Отслеживает повторяющиеся новые ответы в общем чате BigBlueButton.",
+  "permissions": ["storage"],
+  "content_scripts": [{
+    "matches": ["https://bbb04.edu.vsu.ru/*"],
+    "js": ["detector.js", "content.js"],
+    "run_at": "document_idle"
+  }]
+}
